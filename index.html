@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple YouTube Player</title>
+    <link rel="stylesheet" href="/src/styles/base.css">
+    <link rel="stylesheet" href="/src/styles/home.css">
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <main class="home-page">
+      <hgroup class="home-page__heading-group">
+        <h1 class="home-page__heading">Simple YouTube Player</h1>
+        <p class="home-page__description">Enter a video URL or video ID</p>
+      </hgroup>
+      <form class="home-page__form" action="/watch/">
+        <label class="home-page__label" for="video-source">Video URL or video ID</label>
+        <input
+          class="home-page__input"
+          id="video-source"
+          name="video-source"
+          type="text"
+          autocomplete="off"
+          inputmode="url"
+          required
+        >
+        <button class="home-page__button" type="submit" aria-label="Play">
+          <svg class="home-page__button-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 5v14l11-7z"></path>
+          </svg>
+        </button>
+      </form>
+    </main>
+  </body>
+</html>

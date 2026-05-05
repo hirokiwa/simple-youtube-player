@@ -1,0 +1,19 @@
+:root {
+  --color-page-background: #000000;
+  --size-viewport-width: 100vw;
+  --size-viewport-height: 100dvh;
+  --ratio-youtube-video: 16 / 9;
+
+  background: var(--color-page-background);
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-inline-size: var(--size-viewport-width);
+  min-block-size: var(--size-viewport-height);
+}

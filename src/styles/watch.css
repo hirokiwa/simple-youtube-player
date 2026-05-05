@@ -1,0 +1,37 @@
+.watch-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--size-viewport-width);
+  block-size: var(--size-viewport-height);
+  overflow: hidden;
+  background: var(--color-page-background);
+}
+
+.watch-page__heading {
+  position: fixed;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.watch-page__message {
+  color: #ffffff;
+  font: 0.875rem/1.2 system-ui, sans-serif;
+}
+
+.watch-page__video {
+  inline-size: var(--size-viewport-width);
+  block-size: 56.25vw;
+  aspect-ratio: var(--ratio-youtube-video);
+  border: 0;
+}
+
+@media (aspect-ratio > 16 / 9) {
+  .watch-page__video {
+    inline-size: 177.77777778dvh;
+    block-size: var(--size-viewport-height);
+  }
+}
