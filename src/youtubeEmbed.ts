@@ -6,4 +6,4 @@ export const isYouTubeVideoIdentifier = (videoIdentifier: string): boolean =>
   YOUTUBE_VIDEO_IDENTIFIER_PATTERN.test(videoIdentifier)
 
 export const createYouTubeEmbedSource = (videoIdentifier: string): string =>
-  `https://www.youtube.com/embed/${encodeURIComponent(videoIdentifier)}?autoplay=1&playsinline=1&rel=0`
+  `https://www.youtube.com/embed/${encodeURIComponent(videoIdentifier)}?autoplay=1&playsinline=1&rel=0&enablejsapi=1`
