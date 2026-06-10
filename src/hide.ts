@@ -9,6 +9,7 @@ import {
 } from "./playerView"
 import { findHomeFormElement, findVideoSourceInputElement } from "./homeView"
 import { findYouTubeVideoIdentifierFromInput } from "./videoSource"
+import { registerServiceWorker } from "./registerServiceWorker"
 
 const VIDEO_IDENTIFIER_QUERY_PARAMETER_NAME = "v"
 
@@ -77,3 +78,4 @@ const initializeHidePage = (windowReference: Window, documentReference: Document
 }
 
 initializeHidePage(window, document)
+registerServiceWorker(window)
