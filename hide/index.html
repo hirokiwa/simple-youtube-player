@@ -5,19 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple YouTube Player</title>
     <link rel="stylesheet" href="/src/styles/base.css">
+    <link rel="stylesheet" href="/src/styles/home.css">
     <link rel="stylesheet" href="/src/styles/watch.css">
-    <script type="module" src="/src/watch.ts"></script>
+    <link rel="stylesheet" href="/src/styles/hide.css">
+    <script type="module" src="/src/hide.ts"></script>
   </head>
   <body>
-    <main class="watch-page" style="padding-top: 100dvh;">
+    <main class="hide-page" style="padding-top: 100dvh;">
       <h1 class="watch-page__heading">Simple YouTube Player</h1>
-      <p class="watch-page__message">No video to play</p>
-      <iframe
-        class="watch-page__video"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
+      <section class="hide-page__form-section" aria-label="Video selection">
+        <form class="home-page__form" action="/hide/">
+          <label class="home-page__label" for="video-source">Video URL or video ID</label>
+          <input
+            class="home-page__input"
+            id="video-source"
+            name="video-source"
+            type="text"
+            autocomplete="off"
+            inputmode="url"
+            required
+          >
+          <button class="home-page__button" type="submit" aria-label="Play">
+            <svg class="home-page__button-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+          </button>
+        </form>
+      </section>
+      <section class="hide-page__player-section" aria-label="Video player">
+        <p class="watch-page__message">No video to play</p>
+        <iframe
+          class="watch-page__video"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
     </main>
   </body>
 </html>

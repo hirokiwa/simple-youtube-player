@@ -1,0 +1,23 @@
+.hide-page {
+  inline-size: var(--size-viewport-width);
+  min-block-size: calc(var(--size-viewport-height) * 2);
+  background: var(--color-page-background);
+}
+
+.hide-page__form-section,
+.hide-page__player-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  inline-size: var(--size-viewport-width);
+  block-size: var(--size-viewport-height);
+}
+
+.hide-page__form-section {
+  padding-inline: 1rem;
+}
+
+.hide-page__player-section {
+  overflow: hidden;
+}
