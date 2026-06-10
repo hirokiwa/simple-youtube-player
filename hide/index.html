@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple YouTube Player</title>
+    <link rel="stylesheet" href="/src/styles/base.css">
+    <link rel="stylesheet" href="/src/styles/watch.css">
+    <script type="module" src="/src/watch.ts"></script>
+  </head>
+  <body>
+    <main class="watch-page" style="padding-top: 100dvh;">
+      <h1 class="watch-page__heading">Simple YouTube Player</h1>
+      <p class="watch-page__message">No video to play</p>
+      <iframe
+        class="watch-page__video"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </main>
+  </body>
+</html>

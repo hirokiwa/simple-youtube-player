@@ -18,7 +18,6 @@ export type PlayerState =
       status: "empty"
     }>
 
-const YOUTUBE_WATCH_PATHNAMES = ["/watch", "/watch/"] as const
 const VIDEO_IDENTIFIER_QUERY_PARAMETER_NAME = "v"
 const PLAYBACK_RATE_QUERY_PARAMETER_NAME = "speed"
 
@@ -31,8 +30,7 @@ export const createPlayerState = (locationValue: LocationValue): PlayerState => 
     findQueryParameterValue(queryParameterMap, PLAYBACK_RATE_QUERY_PARAMETER_NAME),
   )
 
-  return YOUTUBE_WATCH_PATHNAMES.some((pathname) => pathname === locationValue.pathname) &&
-    isYouTubeVideoIdentifier(videoIdentifier)
+  return isYouTubeVideoIdentifier(videoIdentifier)
     ? { status: "ready", source: createYouTubeEmbedSource(videoIdentifier), playbackRate }
     : { status: "empty" }
 }

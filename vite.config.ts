@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(currentDirectory, "index.html"),
         watch: resolve(currentDirectory, "watch/index.html"),
+        hide: resolve(currentDirectory, "hide/index.html"),
       },
     },
   },
