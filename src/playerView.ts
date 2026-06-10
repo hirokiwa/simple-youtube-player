@@ -16,7 +16,6 @@ export const findPlayerMessageElement = (documentReference: Document): HTMLEleme
   documentReference.querySelector<HTMLElement>(".watch-page__message")
 
 export const setVideoSource = (videoElement: HTMLIFrameElement, source: string): void => {
-  videoElement.hidden = false
   videoElement.src = source
 }
 
@@ -74,10 +73,6 @@ export const hideVideoElement = (videoElement: HTMLIFrameElement): void => {
 
 export const hidePlayerMessageElement = (messageElement: HTMLElement): void => {
   messageElement.hidden = true
-}
-
-export const showPlayerMessageElement = (messageElement: HTMLElement): void => {
-  messageElement.hidden = false
 }
 
 export const applyPlayerState = (
